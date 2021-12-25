@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <header id="header">
+            <a href="#" class="logo">Logo</a>
+            <ul>
+                <li><a href="#home" onclick="toggle()">Home</a></li><!--Correct links here-->
+                <li><a href="#" onclick="toggle()">link1</a></li>
+                <li><a href="#" onclick="toggle()">link2</a></li>
+                <li><a href="#" onclick="toggle()">link3</a></li>
+                <li><a href="#" onclick="toggle()">link4</a></li>
+                <li><a href="#" onclick="toggle()">link5</a></li>
+                <li><a href="#" onclick="toggle()">link6</a></li>
+                <li><a href="#" onclick="toggle()">link7</a></li>
+            </ul>
+            <div class="toggle" onclick="toggle()"></div>
+    </header>
+    <!--Banner-->
+    <section class="banner" id="home">
+        <h2>Hero text<br>here</h2>
+    </section>
+
+    <script type="text/javascript">
+    //static scroll
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
+    //hamburger
+    function toggle(){
+        var header = document.querySelector("header");
+        header.classList.toggle("active");
+    }
+    //counter
+    $(document).ready(function(){
+    $('.counter').counterUp({
+      delay: 10,
+      time: 750
+    });
+    });
+    </script>
+</body>
+</html>
