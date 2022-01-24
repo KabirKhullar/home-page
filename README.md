@@ -1,2 +1,5 @@
-# home-page
-Home Page Template In CSS
+
+# Home Page template
+
+A Home Page Template for quick usage with a mobile fall back
+
